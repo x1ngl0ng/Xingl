@@ -1,0 +1,10 @@
+# 如果觉得好用，请收藏或则分享本站
+header:
+  Accept: 'application/json, text/plain, */*'
+  Accept-Language: zh-CN
+  Connection: keep-alive
+  Referer: 'http://192.168.202.132:8080/'
+  User-Agent: >-
+    Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+    Gecko) Chrome/125.0.0.0 Safari/537.36
+  srforgsectorid: 'null'

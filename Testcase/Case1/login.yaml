@@ -1,0 +1,54 @@
+#请收藏或则分享本站# 如果觉得好用，请收藏或则分享本站
+header:
+  Accept: application/json
+  Accept-Language: zh-CN
+  Connection: keep-alive
+  Content-Type: application/json;charset=UTF-8
+  Origin: 'http://192.168.202.132:8080'
+  Referer: 'http://192.168.202.132:8080/'
+  User-Agent: >-
+    Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+    Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0
+  srforgsectorid: 'null'
+
+data:
+# 如果觉得好用，请收藏或则分享本站
+  updatedate: null
+  pimpersonid: null
+  pimpersonname: xinglong333
+#  pimpersonname:xxx
+  orgid: null
+  orgsectorid: null
+  yglx: null
+  pimpersonid2: null
+  jlczz: null
+  ygbh: '0001'
+  zjlx: '10'
+  zjhm: '140302199601160430'
+  lxdh: '17501090037'
+  ygzt: '30'
+  csrq: null
+  xb: null
+  nj: null
+  pimpersonabilities: []
+  pimpapers: []
+  pimdistirbutions: []
+  pimtitles: []
+  pimvocationals: []
+  pimarmycadres: []
+  pimcorrectionapplies: []
+  pimvacations: []
+  trmtrainpeople: []
+  pimcontracts: []
+  pimeducations: []
+  pimpersonchanges: []
+  pimachievements: []
+  pimresearchfindings: []
+  pimexitandentries: []
+  pimrewardpunishments: []
+  pimpatents: []
+  pimlanguageabilities: []
+  pimarchives: []
+  pimfaminfos: []
+  attendancemreportmxes: []
+  pimworkhistories: []
