@@ -1,0 +1,10 @@
+data:
+   cookie:
+      access_token : dskfsfkdkvnkdnkvnkdnvkdkvnkd
+   id : ${get_id()}
+   #token:kdnkdmckd
+goddsid:
+   - '23456789'
+   - ${get_extract_yaml(goddsid,-1)}
+   - '65666779'
+#{'cookie': 'access_token:dskfsfkdkvnkdnkvnkdnvkdkvnkd', 'id': '${get_id(id)}', 'goddsid': [23456789, 56789000, 65666779]}

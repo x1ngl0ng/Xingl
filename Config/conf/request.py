@@ -13,6 +13,10 @@ logging.basicConfig(level=logging.DEBUG, handlers=[logging.StreamHandler()])
 
 
 class SendRequests:
+    """
+    实现pytest + 关键字参数 + yaml数据驱动（parametrize）
+    只需要传headers和参数即可自动调用对应的请求方式
+    """
     @staticmethod
     def req(method, url, params=None, data=None,put_data=None, headers=None,files=None):
         logging.info(f"Run Current Time:{current_time},Method: {method}\nParams: {params}")
@@ -167,31 +171,11 @@ class SendRequests:
         else:
             raise ValueError("关键字keyword Error")
 
-
+#todo：可以指定调用装饰器，避免不需要的函数也调用
 # SendRequests.get = with_token(SendRequests.get)
 # SendRequests.post = with_token(SendRequests.post)
 # SendRequests.put = with_token(SendRequests.put)
 # SendRequests.delete = with_token(SendRequests.delete)
-#     def __init__(self):
-#         pass
-#     @staticmethod
-#     def get(url, params=None, headers=None):
-#         if params is not None:
-#             query_string = urlencode(params)
-
-#
-#         return res
-#     @staticmethod
-
-#         if headers is None:
-#             res=requests.post(url=url,data=data)
-#         else:
-#             res=requests.post(url=url,data=data,headers=headers)
-#         return res
-#
-#     def put(self):
-#         pass
-#     def delete(self):
 
 
 
@@ -205,4 +189,4 @@ if __name__ == '__main__':
     res=send.run_main(url,data)
     print(res)
     res.json()
-    res.loads()#字典转
+    res.loads()

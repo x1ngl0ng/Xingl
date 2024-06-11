@@ -1,4 +1,7 @@
 class APIConfig:
+    """
+    全局配置文件等价于ini后缀的文件，主要解决同意管理数据的问题，现在只有url，会面会添加headers
+    """
     BASE_URL = "http://192.168.202.132:8080"
     MysqlUrl = BASE_URL.split("//",1)[-1]
     Token =BASE_URL + "/v7/login"
