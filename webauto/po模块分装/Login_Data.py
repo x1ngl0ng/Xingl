@@ -41,7 +41,7 @@ class Login_data:
 #以下db——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 
 
-    def readmysql(self,host, user, password, sql, params=None, charset = 'utf8mb4', port = '3306'):
+    def readmysql(self,host, user, password, sql, params=None, charset = 'utf8mb4', port = 3306):
         """
         :param host: ……
         :param user: ……
@@ -87,15 +87,17 @@ class Login_data:
 
 if __name__ == '__main__':
     login_data = Login_data()
-    login_data.data()
-    # data = login_data.loginSuccessDtate()'
-    host = 'your_host'
-    user = 'your_user'
-    password = 'your_password'
-    database = 'your_database'
-    query = 'SELECT * FROM db.table WHERE column = %s'
-    params = ('value',)
+    # login_data.readmysql()
+    host = '127.0.0.1'
+    user = 'root'
+    password = 'root'
 
-    results = readmysql(host, user, password, database, query, params)
+    sql = "SELECT * FROM finance.bank where name = %s"
+    paras = '中国工商银行'
+
+    sqls = "SELECT * FROM finance.bank where name = '中国工商银行'"
+
+    results = login_data.readmysql(host, user, password, sqls)
+    print(results)
 
     #----------------------------------------------------------------------------------------------

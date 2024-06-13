@@ -54,6 +54,33 @@ class  Login_Operation:
 
         return fail_info
 
+    def safelendmoney(self,driver):
+
+        driver.get("http://127.0.0.1:90/user/tools/toApplyLoan.html")
+        # 输入贷款金额
+        el = WebDriverWait(driver, 6).until(
+            EC.visibility_of_element_located((By.CSS_SELECTOR, 'input.form-control[type="text"][name="amount"]')))
+        el.send_keys('1000')
+
+        # 输入天数
+        el1 = WebDriverWait(driver, 6).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, 'input.form-control[type="text"][name="term"]')))
+        el1.send_keys('3')
+
+        # 点击申请按钮
+        # <button class="btn btn-primary" id="submit" type="button"> 这是确认按钮的源元素，特征class的值的空格部分是html语言的类定义规则表示类嵌套
+        driver.find_element(By.CSS_SELECTOR, 'button.btn.btn-primary#submit').click()
+
+        # 这个地方的空格
+        time.sleep(1)
+        driver.find_element(By.CSS_SELECTOR, 'div.jconfirm-buttons button.btn.btn-default').click()
+
+        # 已取消的弹窗   动态变化的id，所以得忽略id
+        # eg: cancel_text = WebDriverWait(driver, 6).until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'div.jconfirm-content#jconfirm-box77017 div'))).text
+        el3 = WebDriverWait(driver, 6).until(
+            EC.visibility_of_element_located((By.CSS_SELECTOR, 'div.jconfirm-content div'))).text
+
+        return el3
 
 
 
