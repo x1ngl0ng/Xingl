@@ -7,8 +7,6 @@ import logging
 from datetime import datetime
 current_time = datetime.now()
 
-
-
 logging.basicConfig(level=logging.DEBUG, handlers=[logging.StreamHandler()])
 
 

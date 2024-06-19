@@ -20,15 +20,18 @@ class Testbase(SendRequests):
     def serchinfo(self):
 
         yaml_path=r'L:\PythonCode\Interfaceframework\Config\common\ddd.yaml'
-        url=APIConfig.Serch_info
-        params={'size':10,'query':'xinglong','page':0}  #todo:处理get的传参和URL
-        headers = YamlDispos.read_yaml(file_path=yaml_path)['header']
-        response = super().run_main(url, params=params,headers=headers)#, verify=False
-        # response = requests.request("GET", url, headers=headers, data=payload)
-        # print(response)
+        url = APIConfig.Serch_info
+        params = YamlDispos.read_yaml(file_path=yaml_path,target=1)['params']
+        headers = YamlDispos.read_yaml(file_path=yaml_path,target=0)['header']
+        response = super().run_main(url, params=params,headers=headers)# verify=False
+        return response
+
 
 
     def upload(self):
+        """
+        注意列表的参数传递方式
+        """
 
         url = "http://192.168.202.131:8080/ibizutil/upload"
 
@@ -78,8 +81,8 @@ if __name__ == '__main__':
     # print(re)
 
     # cc=TT.tes_create()
-    # TT.serchinfo()
-    TT.putt()
+    TT.serchinfo()
+    # TT.putt()
     # TT.upload()
     # print(type(reget))
     # print(reget.json())

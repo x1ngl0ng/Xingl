@@ -1,18 +1,12 @@
 #热加载
 
-import yaml
-import json
-import re
-import random
+
 import yaml
 import json
 import re
 import random
 
 class DiYAml:
-    """
-
-    """
 
     def get_extract_yaml(self, a, b=None):
         """

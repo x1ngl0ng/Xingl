@@ -1,4 +1,4 @@
-# 如果觉得好用，请收藏或则分享本站
+---
 header:
   Accept: 'application/json, text/plain, */*'
   Accept-Language: zh-CN
@@ -8,3 +8,13 @@ header:
     Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
     Gecko) Chrome/125.0.0.0 Safari/537.36
   srforgsectorid: 'null'
+
+---
+
+params:
+  'size':
+    10
+  'query':
+    'xinglong'
+  'page':
+    0

@@ -5,6 +5,9 @@ from functools import wraps
 from functools import wraps
 
 class GetToken:
+    """
+    将登录封装成1个装饰器，在发起请求的时候触发，将获得的Authorization 和 token形成键值对放入headers
+    """
     @staticmethod
     def get_token():
         url = APIConfig.Token
@@ -27,6 +30,9 @@ class GetToken:
         return token
 
 def with_token(func):
+    """
+    将获得的token，装入header
+    """
     @wraps(func)
     def wrapper(*args, **kwargs):
         token = GetToken.get_token()

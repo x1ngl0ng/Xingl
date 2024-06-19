@@ -17,11 +17,18 @@ class YamlDispos:
     #     return file_path
 
     @staticmethod
-    def read_yaml(file_path):
-        # file_path=None
-        with open(file_path, "r",encoding='utf-8') as file:
-            yaml_data = yaml.safe_load(file)
-            return yaml_data#本来字典，转成json
+    def read_yaml(file_path, target=None):
+        if target is None:
+            raise ValueError(f'当前target为{target}，检查yaml层级')
+
+        with open(file_path, "r", encoding='utf-8') as file:
+            yaml_data = list(yaml.safe_load_all(file))
+            for index, value in enumerate(yaml_data):
+                if index == target:
+                    return value
+
+            raise IndexError(f'目标索引 {target} 超出范围，共有 {len(yaml_data)} 个文档')
+
 
 
 if __name__ == '__main__':
