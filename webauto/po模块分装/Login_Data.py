@@ -2,7 +2,6 @@ import yaml
 import openpyxl
 import pymysql
 
-#这个类里的方法，没自测过，可能会报错，主要看下思路
 class Login_data:
 
 
