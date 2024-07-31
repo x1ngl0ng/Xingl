@@ -42,7 +42,7 @@ class  Login_Operation:
         yield driver
         driver.quit()
 
-    @pytest.fixture()
+    @pytest.fixture(autouse=True)
     def login1(self, driver):
         driver.get('http://127.0.0.1:90/')
         name='lisi'
@@ -53,6 +53,7 @@ class  Login_Operation:
     #  登陆的页面逻辑操作,驱动保持3个模块中都得1样
     def  login(self,driver,name,pwd):
         driver.get('http://127.0.0.1:90/')
+
 
         # 输入用户名
         ele = driver.find_element(By.XPATH, "//input[@id='username']")
